@@ -65,7 +65,7 @@ public class AppointmentListActivity extends AppCompatActivity {
 
 
         binding.fab.setOnClickListener(view -> {
-            openActivity(CreateLabActivity.class);
+            openActivity(CreateAppointmentActivity.class);
         });
     }
 

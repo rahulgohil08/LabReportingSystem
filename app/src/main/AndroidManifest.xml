@@ -31,6 +31,8 @@
         <activity android:name=".EditLabActivity" />
         <activity android:name=".CreateLabActivity" />
         <activity android:name=".LabListActivity" />
+        <activity android:name=".CreateAppointmentActivity" />
+        <activity android:name=".AppointmentListActivity" />
     </application>
 
 </manifest>

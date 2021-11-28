@@ -146,7 +146,7 @@ public class LoginActivity extends AppCompatActivity {
                 openActivity(AdminDashboardActivity.class);
                 finish();
             } else if (userType.equals("user")) {
-                openActivity(AdminDashboardActivity.class);
+                openActivity(UserDashboardActivity.class);
                 finish();
             } else if (userType.equals("lab")) {
                 openActivity(AdminDashboardActivity.class);

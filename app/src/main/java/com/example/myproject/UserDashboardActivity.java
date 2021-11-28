@@ -89,6 +89,6 @@ public class UserDashboardActivity extends AppCompatActivity {
     }
 
     public void manageAppointment(View view) {
-        openActivity(UserListActivity.class);
+        openActivity(AppointmentListActivity.class);
     }
 }
