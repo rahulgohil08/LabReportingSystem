@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">myproject</string>
+    <string name="diagnostic_lab_reporting_system" />
+    <string name="login_type" />
+    <string name="appointment_form" />
+    <string name="patient_name" />
+    <string name="phone_no" />
+    <string name="email" />
+    <string name="select_date" />
+    <string name="make_an_appointment" />
+    <string name="address" />
+    <string name="available_test" />
+    <string name="report_name" />
+    <string name="early_morning" />
+    <string name="_7am_9am" />
+    <string name="button" />
+    <string name="diagnostic_lab_reportingn_system">Diagnostic Lab Reportingn System</string>
+    <string name="login">Login Type</string>
+    <string name="admin">Admin</string>
+    <string name="patient">User</string>
+    <string name="email1">Email</string>
+    <string name="password">Password</string>
+    <string name="no_account">Don\'t have account?</string>
+    <string name="login1">Login</string>
+    <string name="login_form">Login Form</string>
+    <string name="patient_nname">patient Nname</string>
+    <string name="phoneno">Phone No</string>
+    <string name="Email">Email</string>
+    <string name="slot">Slot</string>
+    <string name="time">Time</string>
+    <string name="Report_Name">Report Name</string>
+    <string name="morning">Morning</string>
+    <string name="_8_00am_to_12_00am">8:00am to 12:00am</string>
+    <string name="Aftrenoon">Aftrenoon</string>
+    <string name="_1_00am_to_4_00am">1:00am to 4:00am</string>
+    <string name="eveining">eveining</string>
+    <string name="_5_00pm_to_11_00pm">5:00pm to 11:00pm</string>
+    <string name="Button">Button</string>
+    <string name="aftrenoon">Aftrenoon</string>
+    <string name="evening">Evening</string>
+    <string name="lab">Lab</string>
+
+
+    <array name="gender">
+        <item>Male</item>
+        <item>Female</item>
+    </array>
+</resources>
