@@ -43,7 +43,7 @@ public class AppointmentListActivity extends AppCompatActivity {
 
         sharedPrefManager = new SharedPrefManager(context);
 
-        getSupportActionBar().setTitle("Lab List");
+        getSupportActionBar().setTitle("Appointment List");
         init();
 
     }
