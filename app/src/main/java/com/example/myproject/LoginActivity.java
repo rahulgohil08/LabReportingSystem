@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
@@ -27,6 +28,9 @@ public class LoginActivity extends AppCompatActivity {
     private SharedPrefManager sharedPrefManager;
     private String userType = "admin";
 
+    private EditText edtEmail;
+    private EditText edtPassword;
+
     AppDatabase db;
 
 
@@ -38,13 +42,18 @@ public class LoginActivity extends AppCompatActivity {
                 AppDatabase.class, "my-project").build();
 
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+
+        setContentView(R.layout.activity_login);
 
         sharedPrefManager = new SharedPrefManager(context);
 
         Objects.requireNonNull(getSupportActionBar()).setTitle("Login");
 
         init();
+
+
+        edtEmail = findViewById(R.id.edtEmail);
+        edtPassword = findViewById(R.id.edtPassword);
     }
 
 
@@ -67,9 +76,9 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        binding.button.setOnClickListener(view -> {
-            String Email = binding.edtEmail.getText().toString();
-            String Password = binding.edtPassword.getText().toString();
+        findViewById(R.id.button).setOnClickListener(view -> {
+            String Email = edtEmail.getText().toString();
+            String Password = edtPassword.getText().toString();
 
 
             doLogin(Email, Password);
@@ -77,9 +86,7 @@ public class LoginActivity extends AppCompatActivity {
         });
 
 
-        binding.textViewNote.setOnClickListener(v -> {
-            openActivity(RegisterActivity.class);
-        });
+        findViewById(R.id.textViewNote).setOnClickListener(v -> openActivity(RegisterActivity.class));
     }
 
     private void doLogin(String email, String password) {

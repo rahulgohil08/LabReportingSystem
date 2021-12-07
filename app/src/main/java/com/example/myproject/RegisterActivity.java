@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.EditText;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
@@ -26,6 +27,12 @@ public class RegisterActivity extends AppCompatActivity {
 
     AppDatabase db;
 
+    private EditText edtName;
+    private EditText edtMobile;
+    private EditText edtAddress;
+    private EditText edtEmail;
+    private EditText edtPassword;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,11 +42,19 @@ public class RegisterActivity extends AppCompatActivity {
                 AppDatabase.class, "my-project").build();
 
         binding = ActivityRegisterBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+
+        setContentView(R.layout.activity_register);
 
         sharedPrefManager = new SharedPrefManager(context);
 
         Objects.requireNonNull(getSupportActionBar()).setTitle("Register");
+
+        edtName = findViewById(R.id.edtName);
+        edtMobile = findViewById(R.id.edtMobile);
+        edtAddress = findViewById(R.id.edtAddress);
+        edtEmail = findViewById(R.id.edtEmail);
+        edtPassword = findViewById(R.id.edtPassword);
+
 
         init();
     }
@@ -47,12 +62,12 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void init() {
 
-        binding.btnRegister.setOnClickListener(view -> {
-            String Name = binding.edtName.getText().toString();
-            String Email = binding.edtEmail.getText().toString();
-            String Address = binding.edtAddress.getText().toString();
-            String Mobile = binding.edtMobile.getText().toString();
-            String Password = binding.edtPassword.getText().toString();
+        findViewById(R.id.btnRegister).setOnClickListener(view -> {
+            String Name = edtName.getText().toString();
+            String Email = edtEmail.getText().toString();
+            String Address = edtAddress.getText().toString();
+            String Mobile = edtMobile.getText().toString();
+            String Password = edtPassword.getText().toString();
 
 
             doRegister(Name, Email, Password, Address, Mobile);
