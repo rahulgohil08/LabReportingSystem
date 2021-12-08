@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Room;
@@ -30,6 +31,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText edtEmail;
     private EditText edtPassword;
+    private RadioGroup radioGroup;
 
     AppDatabase db;
 
@@ -49,11 +51,14 @@ public class LoginActivity extends AppCompatActivity {
 
         Objects.requireNonNull(getSupportActionBar()).setTitle("Login");
 
+        edtEmail = findViewById(R.id.edtEmail);
+        edtPassword = findViewById(R.id.edtPassword);
+        radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
+
         init();
 
 
-        edtEmail = findViewById(R.id.edtEmail);
-        edtPassword = findViewById(R.id.edtPassword);
+
     }
 
 
@@ -65,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
             adminDao.insertAdmin(new Admin("Admin", "admin@gmail.com", "password"));
         }).start();
 
-        binding.radioGroup.setOnCheckedChangeListener((radioGroup, i) -> {
+        radioGroup.setOnCheckedChangeListener((radioGroup, i) -> {
 
             if (i == R.id.radioAdmin) {
                 userType = "admin";
