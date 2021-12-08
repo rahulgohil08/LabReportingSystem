@@ -28,10 +28,7 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".UserDashboardActivity" />
         <activity android:name=".UserListActivity" />
-        <activity android:name=".EditLabActivity" />
-        <activity android:name=".CreateLabActivity" />
         <activity android:name=".LabListActivity" />
-        <activity android:name=".CreateAppointmentActivity" />
         <activity android:name=".AppointmentListActivity" />
     </application>
 
